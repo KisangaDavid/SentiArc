@@ -1,5 +1,8 @@
 import ArticleCard from './components/ArticleCard.js';
 import InputAndSubmit from './components/InputAndSubmit';
+import TweetsPage from './components/TweetsPage';
+import TrendsPage from './components/TrendsPage';
+import PostSubmitPage from './components/PostSubmitPage';
 import Home from './components/Home';
 import ArticlesPage from './components/ArticlesPage'
 import './App.css';
@@ -15,14 +18,17 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
+            <Route exact path="/PostSubmitPage">
+              <PostSubmitPage />
+            </Route>
             <Route exact path="/ArticlesPage">
               <ArticlesPage />
             </Route>
             <Route exact path="/TweetsPage">
-
+              <TweetsPage />
             </Route>
-            <Route exact path="TrendsPage">
-              
+            <Route exact path="/TrendsPage">
+              <TrendsPage />
             </Route>
           </Switch>
           </div>

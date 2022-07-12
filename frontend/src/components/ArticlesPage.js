@@ -1,8 +1,8 @@
 function ArticlesPage() {
     return (
-        <div className="articlesPage">
+        <div className="ArticlesPage">
           <header className="App-header">
-          <h1>This is the articles page!</h1>
+          <h1>This is the Articles Page!</h1>
           </header>
         </div>
     );
