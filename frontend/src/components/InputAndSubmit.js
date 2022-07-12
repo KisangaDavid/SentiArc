@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 import axios from 'axios';
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 class InputAndSubmit extends React.Component {
     constructor(props) {
@@ -36,7 +37,10 @@ class InputAndSubmit extends React.Component {
                    Press Search for information about the inputed company!
                     </Form.Text>
                 </Form.Group>
-                <Button type="submit">Search</Button>
+                <Link to={{
+                    pathname:'/PostSubmitPage',
+                    state: {companyName : this.state.toSearch},
+                 }} type="submit" className="btn btn-primary">Search</Link>
             </Form>
         </div>
     }
