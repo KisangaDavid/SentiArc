@@ -1,13 +1,17 @@
 # jpmcHackathon
 
-Price Tracker:
-Use: It will track the depreciation and estimate appreciation of any item over the timeframe of a year
+Company Sentiment App / Service:
+Problem: Lots of apps / services already show how a company is doing financially (show things like revenue, gross margin, growth rate, etc.). However, these services ignore the sentiment people have towards a company, which could be an indicator as to how the company will do in the future.
 
-Targeted demographic:
-People who want to resell items whether new or not
+Target Audience: People doing research on a company to invest in, companies who want to know how their public image is, or people who just want to stay informed.
 
-Logistics:
-A page where it displays the item being reviewed, the budget price set, and the condition(filters from ebay)
-An analytics page (price value estimation) that shows the appreciation and depreciation of the item selected over time
-A notification system that alerts the user when the item has an available price of the set budget
- A page for second-hand services that have the item 
+Idea: User specifies a company then our app scrapes social media (twitter), news sites (google news), and google trends to compile a collection of popular tweets, articles, and data relating to the popularity of the company. This will hopefully give a relatively holistic view of people’s current overall sentiment towards the company. 3 main pages: tweets page, news page, popularity page. Can add more pages & features, such as a survey page and a page with different metrics such as sustainability scores, employer scores, etc. 
+
+Implementation: Web scrape tweets, articles, and google trends about the selected company with selenium or beautifulsoup (python libraries). Create the frontend with Javascript/React, backend with Python/Django, and handle the interaction between the two with Axios get requests. Scripts such as censoring bad language on tweets in python or javascript?
+
+Optional features: 
+Short, direct, in-app surveys to gauge how users feel about different companies. The results of these surveys would be an additional datapoint that users could use to gauge public sentiment towards a company.
+Show environmental impact (climate change, forest damage, water security) over the last X years using CDP (website).
+Somehow gauge the sentiment of individual tweets / posts (research sentiment analysis tools)
+Collect all the scraped data to give a single, overall public sentiment score.
+
