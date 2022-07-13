@@ -1,4 +1,5 @@
 import React from 'react';
+import {Card} from 'react-bootstrap'
 
 class ArticleCard extends React.Component {
     constructor(props) {
@@ -11,15 +12,18 @@ class ArticleCard extends React.Component {
             fullLink: props.fullLink,
             imgSource: props.imgSource,
         }
-        this.getData = this.getData.bind(this)
-        this.handleClick = this.handleClick.bind(this)
-        this.getData = this.getData.bind(this)
     }
 
     render() {
-        return <div>
-           title: {this.state.title}, author: {this.state.author}, date: {this.state.time}, fullLink: {this.state.fullLink}, imgSource: {this.state.imgSource}
-        </div>
+        return (
+            <Card style={{color: "#000"}}>
+                <Card.Img src={this.props.imgSource} referrerpolicy="no-referrer" />
+                <Card.Body>
+                    <Card.Title>{this.props.title}</Card.Title>
+                    <Card.Text>{this.props.author} | {this.props.time} | <a href={this.props.fullLink}>Read Full Article</a></Card.Text>
+                </Card.Body>
+        </Card>
+        );
     }
 
 }
