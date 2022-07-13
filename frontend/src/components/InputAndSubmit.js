@@ -24,7 +24,7 @@ class InputAndSubmit extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        this.getData(this.state.toSearch)
+     //   this.getData(this.state.toSearch)
     }
     
     render() {
@@ -37,10 +37,8 @@ class InputAndSubmit extends React.Component {
                    Press Search for information about the inputed company!
                     </Form.Text>
                 </Form.Group>
-                <Link to={{
-                    pathname:'/PostSubmitPage',
-                    state: {companyName : this.state.toSearch},
-                 }} type="submit" className="btn btn-primary">Search</Link>
+                <Link to='/PostSubmitPage' state={{companyName : this.state.toSearch}}
+                  type="submit" className="btn btn-primary">Search</Link>
             </Form>
         </div>
     }

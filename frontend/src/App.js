@@ -6,36 +6,20 @@ import PostSubmitPage from './components/PostSubmitPage';
 import Home from './components/Home';
 import ArticlesPage from './components/ArticlesPage'
 import './App.css';
-import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
-        <div className = "content">
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/PostSubmitPage">
-              <PostSubmitPage />
-            </Route>
-            <Route exact path="/ArticlesPage">
-              <ArticlesPage />
-            </Route>
-            <Route exact path="/TweetsPage">
-              <TweetsPage />
-            </Route>
-            <Route exact path="/TrendsPage">
-              <TrendsPage />
-            </Route>
-          </Switch>
-          </div>
-        </header>
-      </div>
-        
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/PostSubmitPage" element={<PostSubmitPage />}/>
+        <Route path="/ArticlesPage" element={<ArticlesPage />}/>
+        <Route path="/TweetsPage" element={<TweetsPage />}/>
+        <Route path="/TrendsPage" element={<TrendsPage />}/>
+        </Routes>
     </Router>
+
   );
 }
 
