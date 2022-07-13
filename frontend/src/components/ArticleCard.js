@@ -1,10 +1,9 @@
 import React from 'react';
-import {Card} from 'react-bootstrap'
+import {Card, Row} from 'react-bootstrap'
 
 class ArticleCard extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
             title: props.title,
             author: props.author,
@@ -16,11 +15,13 @@ class ArticleCard extends React.Component {
 
     render() {
         return (
-            <Card style={{color: "#000"}}>
-                <Card.Img src={this.props.imgSource} referrerpolicy="no-referrer" />
+            <Card style={{color: "#000", flexDirection: "row", width: "50%"}}>
+                { /* TODO: Deal with news articles that do not have a thumbnail - maybe insert app logo? */}
+                <Card.Img style={{width: "10vw", height: "10vw"}} src={this.props.imgSource} referrerPolicy="no-referrer"/>
                 <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
-                    <Card.Text>{this.props.author} | {this.props.time} | <a href={this.props.fullLink}>Read Full Article</a></Card.Text>
+                    <Card.Text>{this.props.author} | {this.props.time}</Card.Text>
+                    <Card.Link href= {this.props.fullLink} target="_blank" rel="noopener noreferrer">Read Full Article</Card.Link>
                 </Card.Body>
         </Card>
         );
