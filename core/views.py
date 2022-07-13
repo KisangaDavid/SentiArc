@@ -4,7 +4,7 @@ from rest_framework.response import Response
 # from rest_framework import status
 # from .serializers import NewsArticleSerializer
 # from .models import NewsArticle
-from .customGoogleNewsAPI import GetNewsLink
+from .scripts.customGoogleNewsAPI import GetNewsLink
 
     
 def front(request):
