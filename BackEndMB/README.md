@@ -29,15 +29,16 @@ export BEARER_TOKEN='<your_bearer_token>'
 
 ## Language-specific requirements
 
-### Java environment set up
+### Python environment set up
 
-If you use Homebrew, you can install a Java runtime using:
+You will need to have Python 3 installed to run this code. The Python samples use `requests==2.24.0` which uses `requests-oauthlib==1.3.0`.
+
+You can install these packages as follows:
 
 ```bash
-brew cask install java
+pip install requests
+pip install requests-oauthlib
 ```
-
-You will also need to download the relevant JAR files referenced in the individual samples in order to build and run the code. If you use an IDE, it may be able to do this automatically for you.
 
 ### JavaScript (Node.js) environment set up
 
@@ -49,16 +50,18 @@ npm install got
 npm install oauth-1.0a
 ```
 
-### Python environment set up
 
-You will need to have Python 3 installed to run this code. The Python samples use `requests==2.24.0` which uses `requests-oauthlib==1.3.0`.
+### Java environment set up
 
-You can install these packages as follows:
+If you use Homebrew, you can install a Java runtime using:
 
 ```bash
-pip install requests
-pip install requests-oauthlib
+brew cask install java
 ```
+
+You will also need to download the relevant JAR files referenced in the individual samples in order to build and run the code. If you use an IDE, it may be able to do this automatically for you.
+
+
 
 ### Ruby environment set up
 
