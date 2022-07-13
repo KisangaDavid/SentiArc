@@ -1,5 +1,6 @@
 import React from 'react';
-import {Card, Row} from 'react-bootstrap'
+import {Card, Row} from 'react-bootstrap';
+import './components.css';
 
 class ArticleCard extends React.Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class ArticleCard extends React.Component {
 
     render() {
         return (
-            <Card style={{color: "#000", flexDirection: "row", width: "50%"}}>
+            <Card className="customCard">
                 { /* TODO: Deal with news articles that do not have a thumbnail - maybe insert app logo? */}
                 <Card.Img style={{width: "10vw", height: "10vw"}} src={this.props.imgSource} referrerPolicy="no-referrer"/>
                 <Card.Body>

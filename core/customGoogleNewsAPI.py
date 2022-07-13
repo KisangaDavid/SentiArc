@@ -56,3 +56,6 @@ class GetNewsLink:
         articleDictList = self.getArticles(numArticles)
         convertedData = self.convertToJson(articleDictList)
         return convertedData
+
+
+# list of dictionaries {"numSearches": xxx, 'month percent growth': xxx}

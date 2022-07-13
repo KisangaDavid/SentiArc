@@ -1,0 +1,9 @@
+.customCard {
+  color: rgb(0, 0, 0);
+  flex-direction: row !important;
+  width: 50%;
+  background: rgb(112, 234, 222) !important;
+  margin-top: .5vw;
+  margin-bottom: .5vw;
+  border: 3px solid black !important;
+  }

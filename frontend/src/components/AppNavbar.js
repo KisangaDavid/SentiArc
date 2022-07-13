@@ -1,10 +1,10 @@
 import {Navbar, Nav} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
-
+import './components.css'
 function AppNavBar(props) {
     return (
         <Navbar>
-            <Nav className="mr-auto">
+            <Nav>
                 <LinkContainer to="/TweetsPage" state={{companyName : props.companyName}}>
                     <Nav.Link>Top Tweets</Nav.Link>
                 </LinkContainer >
