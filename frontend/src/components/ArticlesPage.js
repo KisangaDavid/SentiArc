@@ -32,7 +32,7 @@ function ArticlesPage() {
     return (
         <div className="ArticlesPage">
           <AppNavbar companyName = {companyName} />
-          <h2 background="purple">Top stories about {companyName}</h2>
+          <h2 class="TopSto">Top stories about {companyName}</h2>
           <header className="App-header">
           {!dataReturned && <p>loading...</p>}
           {dataReturned && listOfArticles}
