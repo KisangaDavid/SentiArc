@@ -30,13 +30,15 @@ function ArticlesPage() {
     }
     
     return (
+      <div>
+      <AppNavbar companyName = {companyName} />
         <div className="ArticlesPage">
-          <AppNavbar companyName = {companyName} />
-          <h2 class="TopSto">Top stories about {companyName}</h2>
+          <h2 class="pagesHeader">Top articles about {companyName}</h2>
           <header className="App-header">
           {!dataReturned && <p>loading...</p>}
           {dataReturned && listOfArticles}
           </header>
+        </div>
         </div>
     );
   }

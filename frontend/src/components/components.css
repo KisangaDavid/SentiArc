@@ -1,9 +1,42 @@
 .customCard {
-  color: rgb(0, 0, 0);
+  color: rgb(225, 221, 221);
   flex-direction: row !important;
-  width: 50%;
-  background: rgb(112, 234, 222) !important;
-  margin-top: .5vw;
-  margin-bottom: .5vw;
-  border: 3px solid black !important;
+  width: 90%;
+  background: #131e33 !important;
+  margin-bottom: 1rem;
+  border: .1rem solid rgb(225, 221, 221) !important;
   }
+
+.pagesHeader {
+  background: #282c34 !important;
+  color: rgb(225, 221, 221);
+  text-align: center;
+  font-family: "Rockwell", Rockwell;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  
+}
+
+.ArticlesPage {
+  background: #282c34 !important;
+}
+
+.customLink:link {
+  color: rgb(225, 221, 221);
+  text-decoration: none;
+}
+
+.customLink:visited {
+  color: rgb(225, 221, 221);
+  text-decoration: none;
+}
+
+.customLink:hover {
+  color: rgb(225, 221, 221);
+  text-decoration: none;
+}
+
+.customLink:active {
+  color: rgb(225, 221, 221);
+  text-decoration: none;
+}

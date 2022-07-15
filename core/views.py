@@ -18,7 +18,7 @@ def article(request):
     if request.method == 'GET':
         companyName = request.GET.get("companyName", 'DDDDD')
         news = GetNewsLink(companyName) 
-        jsonInfo = news.topXArticlesJson(8)
+        jsonInfo = news.topXArticlesJson(10)
         return Response(jsonInfo)
 
 
