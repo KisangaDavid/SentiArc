@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
 class InputAndSubmit extends React.Component {
@@ -24,7 +23,6 @@ class InputAndSubmit extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-     //   this.getData(this.state.toSearch)
     }
     
     render() {

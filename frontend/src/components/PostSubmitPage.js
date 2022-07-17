@@ -1,24 +1,16 @@
 import { useLocation } from "react-router-dom";
-import {Navbar, Nav} from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap'
-import axios from 'axios';
 import AppNavbar from './AppNavbar';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 
 
 function PostSubmitPage(props) {
-  const [data, setData] = useState([]);
   const location = useLocation();
   const companyName = location.state.companyName;
-  useEffect(() => {
-    console.log("I fire once");
-    getData(companyName);
-  }, []);
+
   
     return (
         <div className="PostSubmitPage">
-      {/* Pass prop (companyName) here */}
           <AppNavbar companyName={companyName}/>
           <header className="App-header">
           <h1>This is the Post Submit page! Company Submitted: {companyName} </h1>
@@ -26,6 +18,15 @@ function PostSubmitPage(props) {
         </div>
     );
   }
+
+
+  
+
+
+/*  useEffect(() => {
+  console.log("I fire once");
+  getData(companyName);
+}, []); 
 
 function getData(input) {
     axios({
@@ -54,9 +55,5 @@ function convertData(data) {
     var parsed = JSON.parse(data);
     return parsed
     
-}
-  
-
-
-
+} */
   export default PostSubmitPage;

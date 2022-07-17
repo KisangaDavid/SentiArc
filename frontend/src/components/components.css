@@ -21,6 +21,19 @@
   background: #282c34 !important;
 }
 
+.TweetsPage {
+  background: #282c34 !important;
+  
+}
+
+.TweetsPageBody {
+  background: #282c34 !important;
+  columns: 2;  
+  width: 69rem;
+  margin: auto;
+
+}
+
 .customLink:link {
   color: rgb(225, 221, 221);
   text-decoration: none;

@@ -1,9 +1,7 @@
 from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-# from rest_framework import status
-# from .serializers import NewsArticleSerializer
-# from .models import NewsArticle
+from .scripts.modifiedTwitterAPI import getTweets
 from .scripts.customGoogleNewsAPI import GetNewsLink
 
     
@@ -16,10 +14,16 @@ def front(request):
 @api_view(['GET'])
 def article(request):
     if request.method == 'GET':
-        companyName = request.GET.get("companyName", 'DDDDD')
-        news = GetNewsLink(companyName) 
-        jsonInfo = news.topXArticlesJson(10)
-        return Response(jsonInfo)
+        requestType = request.GET.get("requestType", "NO REQUEST TYPE")
+        if requestType == "articles":
+            companyName = request.GET.get("companyName", 'DDDDD')
+            news = GetNewsLink(companyName) 
+            jsonInfo = news.topXArticlesJson(10)
+            return Response(jsonInfo)
+        elif requestType == "tweets":
+            companyName = request.GET.get("companyName", 'DDDDD')
+            tweets = getTweets(companyName, 10)
+            return Response(tweets)
 
 
 # @api_view(['DELETE'])

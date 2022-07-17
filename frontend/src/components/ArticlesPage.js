@@ -14,11 +14,11 @@ function ArticlesPage() {
     }, []);
 
     async function getData(input) {
-      const response = await axios({method: "GET", url:"/article/", params: { companyName: input }});
+      const response = await axios({method: "GET", url:"/article/", params: { requestType: "articles", companyName: input }});
       var convertedArticles = convertData(response.data)
       // Should give each element a unique "key" prop
-      const listOfArticleCards = convertedArticles.map((element) =>
-      <ArticleCard title={element.title} author={element.author} time={element.time} fullLink={element.completeLink} imgSource = {element.imgSource}/>)
+      const listOfArticleCards = convertedArticles.map((element, index) =>
+      <ArticleCard key={index} title={element.title} author={element.author} time={element.time} fullLink={element.completeLink} imgSource = {element.imgSource}/>)
       setListOfArticles(listOfArticleCards);
       console.log(listOfArticleCards);
       setDataReturned(true);

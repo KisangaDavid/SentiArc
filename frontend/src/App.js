@@ -1,5 +1,3 @@
-import ArticleCard from './components/ArticleCard.js';
-import InputAndSubmit from './components/InputAndSubmit';
 import TweetsPage from './components/TweetsPage';
 import TrendsPage from './components/TrendsPage';
 import PostSubmitPage from './components/PostSubmitPage';
