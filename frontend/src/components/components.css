@@ -22,14 +22,14 @@
 }
 
 .TweetsPage {
-  background: #282c34 !important;
+  background-color: #282c34;
   
 }
 
 .TweetsPageBody {
   background: #282c34 !important;
-  columns: 2;  
-  width: 69rem;
+  columns: 3;  
+  width: 95%;
   margin: auto;
 
 }
@@ -52,4 +52,10 @@
 .customLink:active {
   color: rgb(225, 221, 221);
   text-decoration: none;
+}
+
+.TweetsPageBody {
+  background-color: #282c34;
+  min-height: 100vh;
+  columns: 3;
 }

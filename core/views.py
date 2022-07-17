@@ -22,7 +22,7 @@ def article(request):
             return Response(jsonInfo)
         elif requestType == "tweets":
             companyName = request.GET.get("companyName", 'DDDDD')
-            tweets = getTweets(companyName, 10)
+            tweets = getTweets(companyName, 12)
             return Response(tweets)
 
 

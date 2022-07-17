@@ -7,10 +7,6 @@ bearer_token = config("BEARER_TOKEN")
 search_url = "https://api.twitter.com/2/tweets/search/recent"
 
 def bearer_oauth(r):
-    """
-    Method required by bearer token authentication.
-    """
-
     r.headers["Authorization"] = f"Bearer {bearer_token}"
     r.headers["User-Agent"] = "v2RecentSearchPython"
     return r
@@ -23,9 +19,10 @@ def connect_to_endpoint(url, params):
     return response.json()
 
 def getTweets(companyName, numTweets):
-    companyName = companyName.replace("and", "\\and\\")
-    companyName = companyName.replace("or", "\\or\\")
-    query_params = {'query': companyName, 'max_results': numTweets}
+    companyName = "@" + companyName
+    companyName = companyName.replace(" ", "")
+    companyName += " lang:en -is:retweet"
+    query_params = {'query': companyName, 'max_results': numTweets, 'sort_order': "relevancy"}
     json_response = connect_to_endpoint(search_url, query_params)
     print(json_response)
     return(json_response)

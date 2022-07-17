@@ -4,7 +4,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import {TwitterTweetEmbed} from 'react-twitter-embed';
 
-// TO DO: Make background solid when loading, english tweets only, mentions inputed company
+//english tweets only, mentions inputed company, try no retweets?
 function TweetsPage() {
     const location = useLocation();
     const companyName = location.state.companyName;
@@ -24,21 +24,20 @@ function TweetsPage() {
       
     }
     
- 
     return (
+      <div>
+      <AppNavbar companyName = {companyName} />
         <div className="TweetsPage">
-          <AppNavbar companyName = {companyName} />
-          <h2 class="pagesHeader">Top Tweets mentioning in {companyName} in the last week</h2>
-          <div className = "TweetsPageBody" >
+          <h2 class="pagesHeader">Top Tweets mentioning {companyName} in the last week</h2>
+          <div className = "TweetsPageBody">
           {!dataReturned && <p>loading...</p>}
           {dataReturned && listOfTweets}
           </div>
         </div>
+        </div>
     );
   }
 
-  export default TweetsPage;
 
-  //<TwitterTweetEmbed options={{theme: "dark", width: 550}} key={index} tweetId={element.id}/>)
-  /* const listOfTweets = response.data.data.map((element, index) =>
-      <TwitterTweetEmbed options={{theme: "dark"}} key={index} tweetId={element.id}/>) */
+
+  export default TweetsPage;
