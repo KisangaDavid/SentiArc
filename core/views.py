@@ -3,7 +3,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .scripts.modifiedTwitterAPI import getTweets
 from .scripts.customGoogleNewsAPI import GetNewsLink
-
+from .scripts.censor import censor
     
 def front(request):
     context = {
@@ -26,11 +26,16 @@ def article(request):
             tweets = getTweets(companyName, 12)
             if censorMode == "true":
                 print("Censor Mode On")
-                
+                tweets = censor(tweets)
                 return Response(tweets)
             else:
                 print("Censor Mode Off")
                 return Response(tweets)
+        elif requestType == "trends":
+            companyName = request.GET.get("companyName", 'DDDDD')
+            trends = checkTrends(companyName)
+            return Response(trends)
+
 
 
 
