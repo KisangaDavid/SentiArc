@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import {TwitterTweetEmbed} from 'react-twitter-embed';
+import loading from './loading.gif'
 
 function TweetsPage() {
     const location = useLocation();
@@ -13,11 +14,12 @@ function TweetsPage() {
     useEffect(() => {
       getData(companyName);
     }, []);
+    
 
     async function getData(input) {
       const response = await axios({method: "GET", url:"/article/", params: { censorMode : censorMode, requestType: "tweets", companyName: input }});
       const listOfTweets = response.data.data.map((element, index) =>
-      <TwitterTweetEmbed class="embeddedTweet" options={{theme: "dark", align: "center"}} key={index} tweetId={element.id}/>)
+      <TwitterTweetEmbed placeholder = {<div style={{textAlign: "center"}}><p style= {{color: "white"}}>Loading Tweet...</p><img style={{width: "7rem", height: "7rem"}} src= {loading} /></div>} class="embeddedTweet" options={{theme: "dark", align: "center"}} key={index} tweetId={element.id}/>)
       setListOfTweets(listOfTweets);
       console.log(listOfTweets)
       setDataReturned(true);

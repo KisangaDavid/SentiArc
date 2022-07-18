@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import AppNavbar from './AppNavbar'
 import React, { useState, useEffect } from 'react';
 import ArticleCard from './ArticleCard';
+import loading from './loading.gif';
 
 function ArticlesPage() {
     const [dataReturned, setDataReturned] = useState(false);
@@ -35,7 +36,7 @@ function ArticlesPage() {
         <div className="ArticlesPage">
           <h2 class="pagesHeader">Top articles about {companyName}</h2>
           <header className="App-header">
-          {!dataReturned && <p>loading...</p>}
+          {!dataReturned && <div><p style= {{color: "white", textAlign: "center"}}>Loading...</p><img style={{width: "8rem", height: "8rem"}} src= {loading} />  </div>}
           {dataReturned && listOfArticles}
           </header>
         </div>

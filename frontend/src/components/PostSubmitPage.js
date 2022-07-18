@@ -1,8 +1,6 @@
 import { useLocation } from "react-router-dom";
 import AppNavbar from './AppNavbar';
-import React, { useState, useEffect } from 'react';
-
-
+import React, { useState } from 'react';
 
 function PostSubmitPage(props) {
   const [censorMode, setCensorMode] = useState(false);
@@ -12,6 +10,7 @@ function PostSubmitPage(props) {
   function handleChange() {
     setCensorMode(!censorMode)
   }
+
     return (
         <div className="PostSubmitPage">
           <AppNavbar companyName={companyName} censorMode = {censorMode}/>
