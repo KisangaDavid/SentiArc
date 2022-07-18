@@ -26,7 +26,7 @@ def article(request):
             tweets = getTweets(companyName, 12)
             if censorMode == "true":
                 print("Censor Mode On")
-                # Run tweets through censor function
+                
                 return Response(tweets)
             else:
                 print("Censor Mode Off")

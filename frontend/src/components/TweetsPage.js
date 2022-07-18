@@ -23,9 +23,7 @@ function TweetsPage() {
       setListOfTweets(listOfTweets);
       console.log(listOfTweets)
       setDataReturned(true);
-      
     }
-    
     return (
       <div>
       <AppNavbar companyName = {companyName} censorMode = {censorMode} />
