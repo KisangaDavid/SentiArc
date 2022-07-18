@@ -29,8 +29,10 @@ function TweetsPage() {
       <AppNavbar companyName = {companyName} censorMode = {censorMode} />
         <div className="TweetsPage">
           <h2 class="pagesHeader">Top Tweets mentioning {companyName} in the last week</h2>
+          <div style= {{textAlign: "center"}}>
+          {!dataReturned && <div><p style= {{color: "white"}}>Loading...</p><img style={{width: "8rem", height: "8rem"}} src= {loading} /></div>}
+          </div>
           <div className = "TweetsPageBody">
-          {!dataReturned && <p>loading...</p>}
           {dataReturned && listOfTweets}
           </div>
         </div>
