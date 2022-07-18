@@ -7,17 +7,17 @@ function AppNavBar(props) {
         <Navbar>
             <Nav>
                 <div style={{marginLeft: "4vw", marginRight: "4vw"}}>
-                <LinkContainer to="/TweetsPage" state={{companyName : props.companyName}}>
+                <LinkContainer to="/TweetsPage" state={{companyName : props.companyName, censorMode : props.censorMode}}>
                     <Nav.Link>Top Tweets</Nav.Link>
                 </LinkContainer >
                 </div>
                 <div style={{marginLeft: "4vw", marginRight: "4vw"}}>
-                <LinkContainer to="/ArticlesPage" state={{companyName : props.companyName}}>
+                <LinkContainer to="/ArticlesPage" state={{companyName : props.companyName, censorMode : props.censorMode}}>
                     <Nav.Link>Hot News</Nav.Link>
                 </LinkContainer>
                 </div>
                 <div style={{marginLeft: "4vw", marginRight: "4vw"}}>
-                <LinkContainer to="/TrendsPage" state={{companyName : props.companyName}}>
+                <LinkContainer to="/TrendsPage" state={{companyName : props.companyName, censorMode : props.censorMode}}>
                     <Nav.Link>Popularity</Nav.Link>
                 </LinkContainer>
                 </div>

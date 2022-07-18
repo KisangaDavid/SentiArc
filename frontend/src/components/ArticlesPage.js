@@ -9,14 +9,14 @@ function ArticlesPage() {
     const [listOfArticles, setListOfArticles] = useState([]);
     const location = useLocation();
     const companyName = location.state.companyName;
+    const censorMode = location.state.censorMode;
     useEffect(() => {
       getData(companyName);
     }, []);
 
     async function getData(input) {
-      const response = await axios({method: "GET", url:"/article/", params: { requestType: "articles", companyName: input }});
+      const response = await axios({method: "GET", url:"/article/", params: {requestType: "articles", companyName: input }});
       var convertedArticles = convertData(response.data)
-      // Should give each element a unique "key" prop
       const listOfArticleCards = convertedArticles.map((element, index) =>
       <ArticleCard key={index} title={element.title} author={element.author} time={element.time} fullLink={element.completeLink} imgSource = {element.imgSource}/>)
       setListOfArticles(listOfArticleCards);
@@ -31,7 +31,7 @@ function ArticlesPage() {
     
     return (
       <div>
-      <AppNavbar companyName = {companyName} />
+      <AppNavbar companyName = {companyName} censorMode = {censorMode} />
         <div className="ArticlesPage">
           <h2 class="pagesHeader">Top articles about {companyName}</h2>
           <header className="App-header">
@@ -42,35 +42,5 @@ function ArticlesPage() {
         </div>
     );
   }
-
-
-
-// function getData(input) {
-//   axios({
-//       method: "GET",
-//       url:"/article/",
-//       params: {
-//           companyName: input
-//       }
-//     }).then((response)=>{
-//       const data = response.data
-//       const convertedData = convertData(data)
-//       return convertedData;       
-//     }).catch((error) => {
-//       if (error.response) {
-//         console.log(error.response);
-//         console.log(error.response.status);
-//         console.log(error.response.headers);
-//         }
-//     })}
-
-  // function PostSubmitPage(props) {
-  //   const [data, setData] = useState([]);
-  //   const location = useLocation();
-  //   const companyName = location.state.companyName;
-  //   useEffect(() => {
-  //     console.log("I fire once");
-  //     getData(companyName);
-  //   }, []);
 
   export default ArticlesPage;

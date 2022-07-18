@@ -24,7 +24,6 @@ def getTweets(companyName, numTweets):
     companyName += " lang:en -is:retweet"
     query_params = {'query': companyName, 'max_results': numTweets, 'sort_order': "relevancy"}
     json_response = connect_to_endpoint(search_url, query_params)
-    print(json_response)
     return(json_response)
 
 getTweets("Barnes and Noble", 10)

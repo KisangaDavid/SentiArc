@@ -22,20 +22,15 @@ def article(request):
             return Response(jsonInfo)
         elif requestType == "tweets":
             companyName = request.GET.get("companyName", 'DDDDD')
+            censorMode = request.GET.get("censorMode", "NOT FOUND")
             tweets = getTweets(companyName, 12)
-            return Response(tweets)
-
-
-# @api_view(['DELETE'])
-# def note_detail(request, pk):
-#     try:
-#         note = Notes.objects.get(pk=pk)
-#     except Notes.DoesNotExist:
-#         return Response(status=status.HTTP_404_NOT_FOUND)
-
-#     if request.method == 'DELETE':
-#         note.delete()
-#         return Response(status=status.HTTP_204_NO_CONTENT)
+            if censorMode == "true":
+                print("Censor Mode On")
+                # Run tweets through censor function
+                return Response(tweets)
+            else:
+                print("Censor Mode Off")
+                return Response(tweets)
 
 
 
