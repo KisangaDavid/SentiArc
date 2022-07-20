@@ -1,6 +1,7 @@
 import {Navbar, Nav} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
 import './components.css'
+
 function AppNavBar(props) {
     return (
         <nav class="justify-content-center navbar navbar-dark" style = {{background: "#282c34", textAlign: "center", fontSize: "1.3rem", fontFamily: "Times New Roman"}}>
@@ -18,7 +19,7 @@ function AppNavBar(props) {
                 </div>
                 <div style={{marginLeft: "4vw", marginRight: "4vw"}}>
                 <LinkContainer to="/TrendsPage" state={{companyName : props.companyName, censorMode : props.censorMode}}>
-                    <Nav.Link>Popularity</Nav.Link>
+                    <Nav.Link>Public Interest</Nav.Link>
                 </LinkContainer>
                 </div>
                 <div style={{marginLeft: "4vw", marginRight: "4vw"}}>

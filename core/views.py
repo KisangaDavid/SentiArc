@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from .scripts.modifiedTwitterAPI import getTweets
 from .scripts.customGoogleNewsAPI import GetNewsLink
 from .scripts.censor import censor
+from .scripts.trends import getTrends
     
 def front(request):
     context = {
@@ -33,7 +34,7 @@ def article(request):
                 return Response(tweets)
         elif requestType == "trends":
             companyName = request.GET.get("companyName", 'DDDDD')
-            trends = checkTrends(companyName)
+            trends = getTrends(companyName)
             return Response(trends)
 
 
