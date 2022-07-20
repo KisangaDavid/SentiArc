@@ -12,7 +12,7 @@ class TrendCard extends React.Component {
             trendStat: props.trendStat,
         }
     }
-//test
+
     render() {
         return (
             <Card className="trendsCard" >
