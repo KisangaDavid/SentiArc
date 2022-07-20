@@ -1,6 +1,7 @@
 import React from 'react';
 import {Card} from 'react-bootstrap';
 import './components.css';
+import SentiArcLogo from './SentiArcLogo.jpg'
 
 class ArticleCard extends React.Component {
     constructor(props) {
@@ -19,7 +20,7 @@ class ArticleCard extends React.Component {
             <Card className="customCard" style={{height: "10.5rem"}}>
                 { /* TODO: Deal with news articles that do not have a thumbnail - maybe insert app logo <-- YA once we got logo 
                 Make links open in new tab*/}
-                <Card.Img style={{width: "8.5rem", height: "8.5rem", marginLeft:".9rem", marginTop:".9rem", marginBottom:".9rem"}} src={this.props.imgSource} referrerPolicy="no-referrer"/>
+                <Card.Img style={{width: "8.5rem", height: "8.5rem", marginLeft:".9rem", marginTop:".9rem", marginBottom:".9rem"}} src={(this.props.imgSource != null) ? this.props.imgSource : SentiArcLogo} referrerPolicy="no-referrer"/>
                 <a href={this.props.fullLink} target="_blank" rel="noreferrer noopener" class="stretched-link customLink">
                 <Card.Body>
                     <Card.Title style= {{fontSize: "2rem", fontFamily: "Times New Roman, Serif" }}>{this.props.title}</Card.Title>
