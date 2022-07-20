@@ -37,14 +37,14 @@ function TrendsPage() {
       var parsed = JSON.parse(data);
       return parsed  
   }
-  // If possible, Large graph on top, interest over time in cards near bottom
 
     return (
       <div>
         <AppNavbar companyName = {companyName} censorMode = {censorMode} /> 
+        <div className="TrendsPage">
         <h2 class="pagesHeader">Public interest in {companyName} over time</h2>
         <LineGraph companyName = {companyName} xAxisData = {graphXAxisData} listOfPopScores = {graphPopData} />
-        <div className="TrendsPage">
+        
             {!dataReturned && <div><p style= {{color: "white", textAlign: "center"}}>Loading...</p><img style={{width: "8rem", height: "8rem"}} src= {loading} />  </div>}
             <div class="TrendsPageBody">
             {dataReturned && trendCards}

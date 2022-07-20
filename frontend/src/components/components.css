@@ -8,41 +8,39 @@
   }
 
 .pagesHeader {
-  background: #282c34 !important;
   color: rgb(225, 221, 221);
   text-align: center;
-  font-family: "Rockwell", Rockwell;
+  font-family: "Goudy Old Style", "Goudy Old Style";
+  font-weight: bold;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
   
 }
 
 .ArticlesPage {
-  background: #282c34 !important;
+  background-image: linear-gradient(to right top, #000000, #1f0513, #300626, #3d043f, #3f0c5f, #3f1270, #3c1982, #322195, #441e97, #531a99, #61149a, #6f0b9b);
 }
 
 .TweetsPage {
-  background-color: #282c34;
+  background-image: linear-gradient(to right top, #000000, #1f0513, #300626, #3d043f, #3f0c5f, #3f1270, #3c1982, #322195, #441e97, #531a99, #61149a, #6f0b9b);
   
 }
 
 .TrendsPage {
-  background-color: #282c34;
+  background-image: linear-gradient(to right top, #000000, #1f0513, #300626, #3d043f, #3f0c5f, #3f1270, #3c1982, #322195, #441e97, #531a99, #61149a, #6f0b9b);
   
 }
 
 .TweetsPageBody {
-  background: #282c34 !important;
   columns: 3;  
   width: 95%;
   margin: auto;
 }
 
 .TrendsPageBody {
-  background: #282c34 !important;
   columns: 3;  
   width: 95%;
   margin: auto;
+  margin-top: 1rem
 }
 
 
@@ -67,7 +65,6 @@
 }
 
 .TweetsPageBody {
-  background-color: #282c34;
   min-height: 100vh;
   columns: 3;
 }
@@ -75,8 +72,23 @@
 .trendsCard {
   color: rgb(225, 221, 221);
   flex-direction: row !important;
-  width: 95%;
+  width: 92%;
   background: #131e33 !important;
   margin-bottom: .2rem;
   border: .1rem solid rgb(225, 221, 221) !important;
   }
+
+  .postSubmitHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+.PostSubmitPage {
+  background-image: linear-gradient(to right top, #000000, #1f0513, #300626, #3d043f, #3f0c5f, #3f1270, #3c1982, #322195, #441e97, #531a99, #61149a, #6f0b9b);
+  min-height: 100vh
+}
+

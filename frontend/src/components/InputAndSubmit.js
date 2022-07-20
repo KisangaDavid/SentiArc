@@ -31,12 +31,12 @@ class InputAndSubmit extends React.Component {
                 <Form.Group>
                     <Form.Label></Form.Label>
                     <Form.Control placeholder="Enter Company Name" onChange = {this.handleChange}/>
-                <Form.Text className="text-muted">
+                <Form.Text style={{color:"rgba(66, 138, 245, .6)"}}>
                    Press Search for information about the inputed company!
                     </Form.Text>
                 </Form.Group>
                 <Link to='/PostSubmitPage' state={{companyName : this.state.toSearch}}
-                  type="submit" className="btn btn-primary">Search</Link>
+                  type="submit" className="btn btn-primary" style={{marginTop: "1rem"}}>Search</Link>
             </Form>
         </div>
     }

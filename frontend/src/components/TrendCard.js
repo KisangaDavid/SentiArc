@@ -15,11 +15,11 @@ class TrendCard extends React.Component {
 
     render() {
         return (
-            <Card className="trendsCard" >
-                <Card.Img style={{width: "7rem", height: "7rem", marginLeft:".5rem", marginTop:".5rem", marginBottom:".5rem"}} src={(this.props.trendStat > 0) ? GreenUpArrow : RedDownArrow} referrerPolicy="no-referrer"/>
+            <Card className="trendsCard" style={{height: "6.6rem"}} >
+                <Card.Img style={{width: "5.5rem", height: "5.5rem", marginLeft:".5rem", marginTop:".5rem", marginBottom:".5rem"}} src={(this.props.trendStat > 0) ? GreenUpArrow : RedDownArrow} referrerPolicy="no-referrer"/>
                 <Card.Body>
                     <Card.Title style= {{fontSize: "2rem", textAlign: "center", fontFamily: "Times New Roman, Serif" }}>{this.props.trendTitle + ":"}</Card.Title>
-                    <Card.Text style= {{fontSize: "2rem", textAlign: "center", fontFamily: "Times New Roman, Serif"}}>{this.props.trendStat + "%"} </Card.Text> 
+                    <Card.Text style= {{fontSize: "2rem", textAlign: "center", fontFamily: "Times New Roman, Serif", color: (this.props.trendStaSt > 0) ? "green" : "red"}}> {this.props.trendStat + "%"} </Card.Text> 
                 </Card.Body>
         </Card>
         );
