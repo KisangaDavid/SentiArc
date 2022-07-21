@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.989adff1.css",
+    "main.js": "/static/js/main.b997a294.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/GreenUpArrow.png": "/static/media/GreenUpArrow.66ff796be49e0309b04d.png",
+    "static/media/RedDownArrow.png": "/static/media/RedDownArrow.1183e519effd655a3b99.png",
+    "static/media/TransparentLogo.png": "/static/media/TransparentLogo.2bd358f67e86e73a7392.png",
+    "static/media/loading.gif": "/static/media/loading.dfc60a73a1b55b904503.gif",
+    "static/media/SentiArcLogo.jpg": "/static/media/SentiArcLogo.bbb8e71b9b23a4cc93fc.jpg",
+    "index.html": "/index.html",
+    "main.989adff1.css.map": "/static/css/main.989adff1.css.map",
+    "main.b997a294.js.map": "/static/js/main.b997a294.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.989adff1.css",
+    "static/js/main.b997a294.js"
+  ]
+}

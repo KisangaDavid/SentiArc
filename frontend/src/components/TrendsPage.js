@@ -6,7 +6,6 @@ import axios from 'axios';
 import loading from './loading.gif'
 import LineGraph from './LineGraph'
 
-// companyName gets smooshed together sometimes, FIX!
 function TrendsPage() { 
     const location = useLocation();
     const companyName = location.state.companyName;

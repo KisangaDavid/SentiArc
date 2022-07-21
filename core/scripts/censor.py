@@ -1,6 +1,5 @@
 from better_profanity import profanity
 
-
 def censor(returnDict):
     profanity.load_censor_words()
     tweets = returnDict.get("data")

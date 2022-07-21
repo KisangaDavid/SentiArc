@@ -28,8 +28,3 @@ function PostSubmitPage(props) {
   }
 
   export default PostSubmitPage;
-
-  /*
-  <div className="result">
-  Censor Mode is {censorMode ? "on" : "off"}.
-</div> */

@@ -34,6 +34,7 @@
   columns: 3;  
   width: 95%;
   margin: auto;
+  min-height: 100vh;
 }
 
 .TrendsPageBody {
@@ -62,11 +63,6 @@
 .customLink:active {
   color: rgb(225, 221, 221);
   text-decoration: none;
-}
-
-.TweetsPageBody {
-  min-height: 100vh;
-  columns: 3;
 }
 
 .trendsCard {

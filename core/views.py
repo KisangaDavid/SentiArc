@@ -26,11 +26,9 @@ def article(request):
             censorMode = request.GET.get("censorMode", "NOT FOUND")
             tweets = getTweets(companyName, 12)
             if censorMode == "true":
-                print("Censor Mode On")
                 tweets = censor(tweets)
                 return Response(tweets)
             else:
-                print("Censor Mode Off")
                 return Response(tweets)
         elif requestType == "trends":
             companyName = request.GET.get("companyName", 'DDDDD')

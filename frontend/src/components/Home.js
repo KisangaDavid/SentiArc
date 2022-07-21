@@ -2,7 +2,6 @@ import transparentLogo from './TransparentLogo.png';
 import InputAndSubmit from './InputAndSubmit'
 import '../App.css';
 
-
 function Home() {
   return (
       <div className="App">

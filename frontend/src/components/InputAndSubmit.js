@@ -50,12 +50,7 @@ class InputAndSubmit extends React.Component {
             }
           }).then((response)=>{
             const data = response.data
-            const convertedData = this.convertData(data)
-            console.log(convertedData[0].title)
-            console.log(convertedData[0].author)
-            console.log(convertedData[0].time)
-            console.log(convertedData[0].completeLink)
-            console.log(convertedData[0].imgSource)       
+            const convertedData = this.convertData(data)      
           }).catch((error) => {
             if (error.response) {
               console.log(error.response);

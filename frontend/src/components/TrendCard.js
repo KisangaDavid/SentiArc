@@ -24,7 +24,6 @@ class TrendCard extends React.Component {
         </Card>
         );
     }
-
 }
 
 export default TrendCard

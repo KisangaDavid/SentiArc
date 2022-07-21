@@ -40,6 +40,4 @@ function TweetsPage() {
     );
   }
 
-
-
   export default TweetsPage;
