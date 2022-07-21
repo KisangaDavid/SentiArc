@@ -2,7 +2,7 @@ import Plot from 'react-plotly.js';
 
 function LineGraph(props) {
     return (
-        <Plot style={{height: "88%", width: "72%", margin: "auto"}} data={[{
+        <Plot style={{height: "100%", width: "71%", margin: "auto"}} data={[{
                 x: props.xAxisData,
                 y: props.listOfPopScores,
                 type: 'scatter',

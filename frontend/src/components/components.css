@@ -27,7 +27,7 @@
 
 .TrendsPage {
   background-image: linear-gradient(to right top, #000000, #1f0513, #300626, #3d043f, #3f0c5f, #3f1270, #3c1982, #322195, #441e97, #531a99, #61149a, #6f0b9b);
-  
+  min-height: 90.79vh
 }
 
 .TweetsPageBody {
@@ -37,10 +37,10 @@
 }
 
 .TrendsPageBody {
-  columns: 3;  
-  width: 95%;
+  columns: 3; 
+  width: 100%;
   margin: auto;
-  margin-top: 1rem
+  margin-top: 5rem
 }
 
 
@@ -72,9 +72,10 @@
 .trendsCard {
   color: rgb(225, 221, 221);
   flex-direction: row !important;
-  width: 92%;
+  width: 82%;
   background: #131e33 !important;
   margin-bottom: .2rem;
+  margin: auto;
   border: .1rem solid rgb(225, 221, 221) !important;
   }
 
