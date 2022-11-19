@@ -38,5 +38,5 @@ Frontend written using javascript / React, backend written in python using the D
 1. Download the codebase locally and install node dependencies using $ npm install
 2. Install Django in a virtual environment in the project's root directory
 3. Create a .env file in the root directory with two environmental variables specified: ```SECRET_KEY``` (Django secret key) and ```BEARER_TOKEN``` (Bearer token from Twitter API)
-2. Start the server by running ```$ python manage.py``` runserver in the root directory
+2. Start the server by running ```$ python manage.py runserver``` in the root directory
 5. Start the webapp by opening a new terminal window, going to the /frontend directory, and running ```$ npm start```
